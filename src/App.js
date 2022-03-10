@@ -1,8 +1,6 @@
-
+import Root from "./root/root";
 function App() {
-  return (
-    <>App
-    </>
-  );
+  return
+  <Root />;
 }
 export default App;
