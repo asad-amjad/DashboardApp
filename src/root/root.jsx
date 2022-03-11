@@ -1,11 +1,11 @@
 import Grid from "@mui/material/Grid";
-import Home from "../pages/Home";
+import Home from "../pages/home/Home";
 import Header from "../header/Header";
 import Sidebar from "../sidebar/Sidebar";
 
 function Root() {
   return (
-    <Grid container spacing={0}>
+    <Grid container >
       <Grid item md={2} xs={2} sm={2}>
         <Sidebar />
       </Grid>

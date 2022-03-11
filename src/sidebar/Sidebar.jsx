@@ -15,17 +15,13 @@ import { hasChildren } from "../shared/utilities";
 
 export default function Sidebar() {
   return (
-    <Grid contain>
-      <Grid item>
-        <Grid container>
-          <Grid item p={4}>
-            <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-            <Typography mt={2} variant="h5">
-              Admin One
-            </Typography>
-            <Typography variant="p">Centralin User</Typography>
-          </Grid>
-        </Grid>
+    <Grid container>
+      <Grid item p={4}>
+        <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+        <Typography mt={2} variant="h5">
+          Admin One
+        </Typography>
+        <Typography variant="p">Centralin User</Typography>
       </Grid>
       <Grid item>
         {menu.map((item, key) => (
@@ -51,9 +47,9 @@ const SingleLevel = ({ item }) => {
         <ListItemIcon>{item.icon}</ListItemIcon>
         <ListItemText primary={item.title} />
       </ListItem>
-      {item.border && (
+      {/* {item.border && (
         <Divider style={{ background: "#dddddd" }} variant="middle" />
-      )}
+      )} */}
     </>
   );
 };
