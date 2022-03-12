@@ -5,7 +5,7 @@ import Sidebar from "../sidebar/Sidebar";
 
 function Root() {
   return (
-    <Grid container >
+    <Grid container>
       <Grid item md={2} xs={2} sm={2}>
         <Sidebar />
       </Grid>

@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import Grid from "@mui/material/Grid";
 import Select from "@mui/material/Select";
 import Avatar from "@mui/material/Avatar";
@@ -58,9 +58,7 @@ const Header = () => {
             </Grid>
             <Grid item md={4}>
               <FormControl sx={{ m: 1, minWidth: 140 }} size="small">
-                <InputLabel id="language">
-                  Language
-                </InputLabel>
+                <InputLabel id="language">Language</InputLabel>
                 <Select
                   labelId="language"
                   value={language}
