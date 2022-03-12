@@ -1,7 +1,7 @@
 import Grid from "@mui/material/Grid";
-import Home from "../pages/home/Home";
-import Header from "../header/Header";
-import Sidebar from "../sidebar/Sidebar";
+import Header from "./header/Header";
+import Home from "../home-page/Home";
+import Sidebar from "./sidebar/Sidebar";
 
 function Root() {
   return (

@@ -4,7 +4,7 @@ import Grid from "@mui/material/Grid";
 import Divider from "@mui/material/Divider";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
-import TextWithLabel from "../../shared/TextWithLabel";
+import TextWithLabel from "../shared/TextWithLabel";
 import AccountActivityTable from "./AccountActivityTable";
 
 function SignInSecurityTab() {

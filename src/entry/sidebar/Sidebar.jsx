@@ -10,8 +10,8 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import { menu, bottomMenu } from "./menu";
-import { hasChildren } from "../shared/utilities";
+import { menu, bottomMenu } from "./Routes";
+import { hasChildren } from "../../utilities";
 
 export default function Sidebar() {
   return (
