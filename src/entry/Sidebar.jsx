@@ -1,18 +1,22 @@
 import React from "react";
-import Grid from "@mui/material/Grid";
-import Button from "@mui/material/Button";
-import Divider from "@mui/material/Divider";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
+import {
+  Grid,
+  Drawer,
+  Button,
+  Divider,
+  Toolbar,
+  Typography,
+} from "@mui/material";
 import LogoutIcon from "@mui/icons-material/Logout";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import TelegramIcon from "@material-ui/icons/Telegram";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
-import { menu } from "./Routes";
+import { menu } from "./components/Routes";
 import MenuItem from "./components/ListItems";
 
-function Sidebar() {
+const socialIconStyle = { display: "flex", justifyContent: "center" };
+function SidebarItems() {
   return (
     <>
       <Toolbar />
@@ -36,28 +40,13 @@ function Sidebar() {
         );
       })}
       <Grid p={3} pt={1} container>
-        <Grid
-          item
-          p={1}
-          md={4}
-          style={{ display: "flex", justifyContent: "center" }}
-        >
+        <Grid item p={1} md={4} style={socialIconStyle}>
           <FacebookOutlinedIcon />
         </Grid>
-        <Grid
-          item
-          p={1}
-          md={4}
-          style={{ display: "flex", justifyContent: "center" }}
-        >
+        <Grid item p={1} md={4} style={socialIconStyle}>
           <TelegramIcon />
         </Grid>
-        <Grid
-          item
-          p={1}
-          md={4}
-          style={{ display: "flex", justifyContent: "center" }}
-        >
+        <Grid item p={1} md={4} style={socialIconStyle}>
           <YouTubeIcon />
         </Grid>
         <Grid
@@ -73,6 +62,48 @@ function Sidebar() {
           </Button>
         </Grid>
       </Grid>
+    </>
+  );
+}
+
+function Sidebar({ container, mobileOpen, handleDrawerToggle, drawerWidth }) {
+  return (
+    <>
+      <Drawer
+        container={container}
+        variant="temporary"
+        open={mobileOpen}
+        onClose={() => handleDrawerToggle()}
+        ModalProps={{
+          keepMounted: true,
+        }}
+        sx={{
+          "& .MuiDrawer-paper": {
+            overflow: "hidden",
+            background: "#555555",
+            color: "#ffffffcc",
+          },
+        }}
+      >
+        <SidebarItems />
+      </Drawer>
+
+      <Drawer
+        variant="permanent"
+        sx={{
+          display: { xs: "none", sm: "block" },
+          "& .MuiDrawer-paper": {
+            boxSizing: "border-box",
+            width: drawerWidth,
+            overflow: "hidden",
+            background: "#555555",
+            color: "white",
+          },
+        }}
+        open
+      >
+        <SidebarItems />
+      </Drawer>
     </>
   );
 }

@@ -1,6 +1,5 @@
 import React from "react";
-import Tab from "@mui/material/Tab";
-import Tabs from "@mui/material/Tabs";
+import { Tab, Tabs } from "@mui/material";
 import SignInSecurityTab from "./SignInSecurityTab";
 
 function TabPanel(props) {

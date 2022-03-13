@@ -1,12 +1,14 @@
 import React, { useState } from "react";
-import List from "@mui/material/List";
-import Collapse from "@mui/material/Collapse";
-import ListItem from "@mui/material/ListItem";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
+import {
+  List,
+  ListItem,
+  Collapse,
+  ListItemIcon,
+  ListItemText,
+} from "@mui/material";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import { hasChildren } from "../../../utilities";
+import { hasChildren } from "../../utilities";
 
 const SingleLevel = ({ item }) => {
   return (

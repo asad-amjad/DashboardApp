@@ -1,17 +1,19 @@
 import React from "react";
-import Grid from "@mui/material/Grid";
-import Avatar from "@mui/material/Avatar";
-import Select from "@mui/material/Select";
-import Switch from "@mui/material/Switch";
-import Divider from "@mui/material/Divider";
-import MenuItem from "@mui/material/MenuItem";
-import FormGroup from "@mui/material/FormGroup";
-import InputLabel from "@mui/material/InputLabel";
-import Typography from "@mui/material/Typography";
-import IconButton from "@mui/material/IconButton";
-import FormControl from "@mui/material/FormControl";
+import {
+  Grid,
+  Avatar,
+  Select,
+  Switch,
+  Divider,
+  MenuItem,
+  FormGroup,
+  InputLabel,
+  Typography,
+  IconButton,
+  FormControl,
+  FormControlLabel,
+} from "@mui/material";
 import SettingsIcon from "@mui/icons-material/Settings";
-import FormControlLabel from "@mui/material/FormControlLabel";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 
 const Header = () => {
