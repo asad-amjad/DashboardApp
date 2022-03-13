@@ -37,7 +37,6 @@ export default function TabsSection() {
   return (
     <>
       <Tabs
-        // p={10}
         value={value}
         onChange={handleChange}
         sx={{ borderBottom: 1, borderColor: "divider" }}

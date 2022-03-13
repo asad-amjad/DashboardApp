@@ -16,13 +16,13 @@ function SignInSecurityTab() {
 
   return (
     <>
-      <Grid container pt={1}>
+      <>
         <Card style={{ padding: "15px", width: "100%" }}>
           <Grid container pt={1} style={{ display: "flex" }}>
-            <Grid item md={5}>
+            <Grid item md={5} xs={5}>
               <Typography variant="h6">Sing in</Typography>
             </Grid>
-            <Grid item md={7}>
+            <Grid item md={7} xs={7}>
               <TextFieldCustom
                 handleChange={handleChange}
                 value={email}
@@ -36,8 +36,8 @@ function SignInSecurityTab() {
             </Grid>
           </Grid>
         </Card>
-      </Grid>
-
+      </>
+      
       <Grid container pl={1} pr={1} pt={5} style={{ display: "flex" }}>
         <Grid item md={5}>
           <Typography variant="h6">Security Information</Typography>

@@ -1,15 +1,15 @@
-import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
-import ArticleIcon from '@mui/icons-material/Article';
-import GroupIcon from '@mui/icons-material/Group';
-import PersonIcon from '@mui/icons-material/Person';
-import AssessmentIcon from '@mui/icons-material/Assessment';
-import SupportAgentIcon from '@mui/icons-material/SupportAgent';
-import FeedbackIcon from '@mui/icons-material/Feedback';
-import React from "react";
+import DescriptionIcon from '@material-ui/icons/Description';
+import NotificationsIcon from '@material-ui/icons/Notifications';
+import PermIdentityIcon from '@material-ui/icons/PermIdentity';
+import GroupIcon from '@material-ui/icons/Group';
+import AssessmentIcon from '@material-ui/icons/Assessment';
+import SwapVertIcon from '@material-ui/icons/SwapVert';
+import HeadsetMicIcon from '@material-ui/icons/HeadsetMic';
+import FeedbackIcon from '@material-ui/icons/Feedback';
 
 export const menu = [
     {
-        icon: <ArticleIcon />,
+        icon: <DescriptionIcon />,
         title: "Downloads",
         items: [{
             title: "Download",
@@ -22,7 +22,7 @@ export const menu = [
         items: []
     },
     {
-        icon: <PersonIcon />,
+        icon: <PermIdentityIcon />,
         title: "Personal links",
         items: []
     },
@@ -38,20 +38,20 @@ export const menu = [
         ]
     },
     {
-        icon: <HomeOutlinedIcon />,
+        icon: <NotificationsIcon />,
         title: "Smart Alert",
     },
     {
-        icon: <HomeOutlinedIcon />,
+        icon: <AssessmentIcon />,
         title: "Trending Diary",
     },
     {
-        icon: <HomeOutlinedIcon />,
+        icon: <SwapVertIcon />,
         title: "Co-Devlopment",
         border: true
     },
     {
-        icon: <SupportAgentIcon />,
+        icon: <HeadsetMicIcon />,
         title: "Support"
     },
     {

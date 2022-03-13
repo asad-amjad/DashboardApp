@@ -1,19 +1,18 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
-import Select from "@mui/material/Select";
 import Avatar from "@mui/material/Avatar";
-import AppBar from "@mui/material/AppBar";
+import Select from "@mui/material/Select";
 import Switch from "@mui/material/Switch";
 import Divider from "@mui/material/Divider";
 import MenuItem from "@mui/material/MenuItem";
 import FormGroup from "@mui/material/FormGroup";
-import IconButton from "@mui/material/IconButton";
+import InputLabel from "@mui/material/InputLabel";
 import Typography from "@mui/material/Typography";
+import IconButton from "@mui/material/IconButton";
+import FormControl from "@mui/material/FormControl";
 import SettingsIcon from "@mui/icons-material/Settings";
 import FormControlLabel from "@mui/material/FormControlLabel";
-import InputLabel from "@mui/material/InputLabel";
-import FormControl from "@mui/material/FormControl";
-import CircleNotificationsIcon from "@mui/icons-material/CircleNotifications";
+import NotificationsIcon from "@material-ui/icons/Notifications";
 
 const Header = () => {
   const [language, setLanguage] = React.useState("English");
@@ -23,24 +22,21 @@ const Header = () => {
   };
 
   return (
-    <AppBar
-      style={{ background: "white", color: "black" }}
-      position="static"
-      elevation={0}
-    >
+    <>
       <Grid
         container
         style={{ display: "flex", justifyContent: "space-evenly" }}
       >
-        <Grid item md={6} style={{ alignSelf: "center" }}>
+        <Grid item md={6} xs={12} style={{ alignSelf: "center" }}>
           <Typography variant="h5">Welcome to Centralin!</Typography>
         </Grid>
 
-        <Grid item md={5}>
+        <Grid item md={6}>
           <Grid container style={{ display: "flex", alignItems: "center" }}>
             <Grid
               item
               md={5}
+              xs={5}
               style={{
                 display: "flex",
                 alignItems: "center",
@@ -56,8 +52,8 @@ const Header = () => {
                 />
               </FormGroup>
             </Grid>
-            <Grid item md={4}>
-              <FormControl sx={{ m: 1, minWidth: 140 }} size="small">
+            <Grid item md={4} xs={4}>
+              <FormControl sx={{ m: 1, minWidth: 130 }} size="small">
                 <InputLabel id="language">Language</InputLabel>
                 <Select
                   labelId="language"
@@ -69,17 +65,17 @@ const Header = () => {
                 </Select>
               </FormControl>
             </Grid>
-            <Grid item md={1}>
+            <Grid item md={1} xs={1}>
               <IconButton>
-                <CircleNotificationsIcon />
+                <NotificationsIcon />
               </IconButton>
             </Grid>
-            <Grid item md={1}>
+            <Grid item md={1} xs={1}>
               <IconButton>
                 <SettingsIcon />
               </IconButton>
             </Grid>
-            <Grid item md={1}>
+            <Grid item md={1} xs={1}>
               <IconButton>
                 <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
               </IconButton>
@@ -88,7 +84,7 @@ const Header = () => {
         </Grid>
       </Grid>
       <Divider style={{ background: "#dddddd" }} variant="middle" />
-    </AppBar>
+    </>
   );
 };
 export default Header;
