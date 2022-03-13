@@ -31,6 +31,7 @@ function Layout(props) {
         position="fixed"
         style={{ background: "white", color: "black" }}
         sx={AppSx}
+        elevation={1}
       >
         <Toolbar>
           <IconButton

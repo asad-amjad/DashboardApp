@@ -22,7 +22,7 @@ const Header = () => {
   const handleChange = (event) => {
     setLanguage(event.target.value);
   };
-
+  const IconGrid = { textAlignLast: "center" };
   return (
     <>
       <Grid
@@ -33,19 +33,9 @@ const Header = () => {
           <Typography variant="h5">Welcome to Centralin!</Typography>
         </Grid>
 
-        <Grid item md={6}>
+        <Grid item md={6} xs={12}>
           <Grid container style={{ display: "flex", alignItems: "center" }}>
-            <Grid
-              item
-              md={5}
-              xs={5}
-              style={{
-                display: "flex",
-                alignItems: "center",
-
-                justifyContent: "space-evenly",
-              }}
-            >
+            <Grid item md={5} xs={6}>
               <FormGroup>
                 <FormControlLabel
                   control={<Switch defaultChecked />}
@@ -67,17 +57,17 @@ const Header = () => {
                 </Select>
               </FormControl>
             </Grid>
-            <Grid item md={1} xs={1}>
+            <Grid item md={1} xs={4} style={IconGrid}>
               <IconButton>
                 <NotificationsIcon />
               </IconButton>
             </Grid>
-            <Grid item md={1} xs={1}>
+            <Grid item md={1} xs={4} style={IconGrid}>
               <IconButton>
                 <SettingsIcon />
               </IconButton>
             </Grid>
-            <Grid item md={1} xs={1}>
+            <Grid item md={1} xs={4} style={IconGrid}>
               <IconButton>
                 <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
               </IconButton>

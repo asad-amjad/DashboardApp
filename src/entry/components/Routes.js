@@ -40,6 +40,7 @@ export const menu = [
     {
         icon: <NotificationsIcon />,
         title: "Smart Alert",
+        notification: true
     },
     {
         icon: <AssessmentIcon />,

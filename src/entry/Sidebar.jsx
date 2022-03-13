@@ -21,7 +21,9 @@ function SidebarItems() {
     <>
       <Toolbar />
       <Grid item p={4} pt={0} md={12} xs={12} sm={12}>
-        <AccountCircleIcon style={{ color: "#1976d2", fontSize: 40 }} />
+        <AccountCircleIcon
+          style={{ color: "rgb(50 132 213 / 79%)", fontSize: 60 }}
+        />
         <Typography mt={2} variant="h5" style={{ color: "#ffffffcc" }}>
           Admin One
         </Typography>
@@ -34,20 +36,20 @@ function SidebarItems() {
           <div key={i}>
             <MenuItem item={item} />
             {item.border && (
-              <Divider style={{ background: "#dddddd" }} variant="middle" />
+              <Divider style={{ background: "rgb(168 168 168 / 74%)" }} variant="middle" />
             )}
           </div>
         );
       })}
       <Grid p={3} pt={1} container>
         <Grid item p={1} md={4} style={socialIconStyle}>
-          <FacebookOutlinedIcon />
+          <FacebookOutlinedIcon style={{ color: "rgb(48 147 121)" }} />
         </Grid>
         <Grid item p={1} md={4} style={socialIconStyle}>
-          <TelegramIcon />
+          <TelegramIcon style={{ color: "rgb(48 147 121)" }} />
         </Grid>
         <Grid item p={1} md={4} style={socialIconStyle}>
-          <YouTubeIcon />
+          <YouTubeIcon style={{ color: "rgb(48 147 121)" }} />
         </Grid>
         <Grid
           item
@@ -57,7 +59,11 @@ function SidebarItems() {
           sm={12}
           style={{ textAlignLast: "center" }}
         >
-          <Button variant="contained" color="success" endIcon={<LogoutIcon />}>
+          <Button
+            variant="contained"
+            style={{ background: "rgb(48 147 121)" }}
+            endIcon={<LogoutIcon />}
+          >
             Log out
           </Button>
         </Grid>
