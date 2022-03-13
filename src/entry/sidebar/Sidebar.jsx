@@ -47,9 +47,9 @@ const SingleLevel = ({ item }) => {
         <ListItemIcon>{item.icon}</ListItemIcon>
         <ListItemText primary={item.title} />
       </ListItem>
-      {/* {item.border && (
+      {item.border && (
         <Divider style={{ background: "#dddddd" }} variant="middle" />
-      )} */}
+      )}
     </>
   );
 };

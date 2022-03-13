@@ -5,10 +5,10 @@ import TabsSection from "./TabsSection";
 
 function Home() {
   return (
-    <Grid container p={6}>
+    <Grid container pl={20} pr={20} pt={10}>
       <Grid item md={12} sm={12}>
         <Typography variant="h5">
-          <b>Profile</b>
+          <strong>Profile</strong>
         </Typography>
       </Grid>
       <Grid item>

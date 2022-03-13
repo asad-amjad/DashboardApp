@@ -1,9 +1,9 @@
 import Table from "@mui/material/Table";
+import TableRow from "@mui/material/TableRow";
+import TableHead from "@mui/material/TableHead";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
-import TableRow from "@mui/material/TableRow";
 
 const rows = [
   {
@@ -35,6 +35,7 @@ const rows = [
 export default function AccountActivityTable() {
   const activeColor = { color: "green" };
   const inActiveColor = { color: "red" };
+  const HeaderStyle = { background: "#ebebeb" };
 
   const mapList = () =>
     rows.map(({ date, time, ip_address, change_made, action, status }, i) => (
@@ -53,19 +54,19 @@ export default function AccountActivityTable() {
       <Table stickyHeader aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell>
+            <TableCell style={HeaderStyle}>
               <strong>DATE</strong>
             </TableCell>
-            <TableCell>
+            <TableCell style={HeaderStyle}>
               <strong>TIME</strong>
             </TableCell>
-            <TableCell>
+            <TableCell style={HeaderStyle}>
               <strong>IP Address</strong>
             </TableCell>
-            <TableCell>
+            <TableCell style={HeaderStyle}>
               <strong>CHANGE MADE</strong>
             </TableCell>
-            <TableCell>
+            <TableCell style={HeaderStyle}>
               <strong>ACTION</strong>
             </TableCell>
           </TableRow>
