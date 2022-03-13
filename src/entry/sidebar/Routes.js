@@ -50,8 +50,6 @@ export const menu = [
         title: "Co-Devlopment",
         border: true
     },
-];
-export const bottomMenu = [
     {
         icon: <SupportAgentIcon />,
         title: "Support"

@@ -10,7 +10,7 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import { menu, bottomMenu } from "./Routes";
+import { menu } from "./Routes";
 import { hasChildren } from "../../utilities";
 
 export default function Sidebar() {
@@ -24,12 +24,16 @@ export default function Sidebar() {
         <Typography variant="p">Centralin User</Typography>
       </Grid>
       <Grid item>
-        {menu.map((item, key) => (
-          <MenuItem key={key} item={item} />
-        ))}
-        {bottomMenu.map((item, key) => (
-          <MenuItem key={key} item={item} />
-        ))}
+        {menu.map((item, key) => {
+          return (
+            <>
+              <MenuItem key={key} item={item} />
+              {item.border && (
+                <Divider style={{ background: "#dddddd" }} variant="middle" />
+              )}
+            </>
+          );
+        })}
       </Grid>
     </Grid>
   );
@@ -47,9 +51,6 @@ const SingleLevel = ({ item }) => {
         <ListItemIcon>{item.icon}</ListItemIcon>
         <ListItemText primary={item.title} />
       </ListItem>
-      {item.border && (
-        <Divider style={{ background: "#dddddd" }} variant="middle" />
-      )}
     </>
   );
 };
