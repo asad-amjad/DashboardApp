@@ -10,7 +10,7 @@ function Home() {
           <strong>Profile</strong>
         </Typography>
       </Grid>
-      <Grid item>
+      <Grid item md={12} xs={12}>
         <TabsSection />
       </Grid>
     </Grid>

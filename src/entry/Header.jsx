@@ -44,7 +44,7 @@ const Header = () => {
                 />
               </FormGroup>
             </Grid>
-            <Grid item md={4} xs={4}>
+            <Grid item md={4} xs={4} style={{textAlign: 'center'}}>
               <FormControl sx={{ m: 1, minWidth: 130 }} size="small">
                 <InputLabel id="language">Language</InputLabel>
                 <Select

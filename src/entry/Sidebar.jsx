@@ -20,28 +20,43 @@ function SidebarItems() {
   return (
     <>
       <Toolbar />
-      <Grid item p={4} pt={0} md={12} xs={12} sm={12}>
+      <Grid item md={12} xs={12} sm={12}>
         <AccountCircleIcon
-          style={{ color: "rgb(50 132 213 / 79%)", fontSize: 60 }}
+          style={{
+            color: "rgb(50 132 213 / 79%)",
+            fontSize: 65,
+            marginLeft: "10px",
+          }}
         />
-        <Typography mt={2} variant="h5" style={{ color: "#ffffffcc" }}>
+        <Typography
+          pl={2}
+          pb={0}
+          variant="h5"
+          style={{ color: "#ffffffcc" }}
+        >
           Admin One
         </Typography>
-        <Typography variant="p" style={{ color: "#ffffffcc" }}>
+        <Typography variant="p" p={2} style={{ color: "#ffffffcc" }}>
           Centralin User
         </Typography>
+
+        <div style={{ marginTop: "20%" }}>
+          {menu.map((item, i) => {
+            return (
+              <div key={i}>
+                <MenuItem item={item} />
+                {item.border && (
+                  <Divider
+                    style={{ background: "rgb(168 168 168 / 74%)" }}
+                    variant="middle"
+                  />
+                )}
+              </div>
+            );
+          })}
+        </div>
       </Grid>
-      {menu.map((item, i) => {
-        return (
-          <div key={i}>
-            <MenuItem item={item} />
-            {item.border && (
-              <Divider style={{ background: "rgb(168 168 168 / 74%)" }} variant="middle" />
-            )}
-          </div>
-        );
-      })}
-      <Grid p={3} pt={1} container>
+      <Grid p={3} pt={4} container>
         <Grid item p={1} md={4} style={socialIconStyle}>
           <FacebookOutlinedIcon style={{ color: "rgb(48 147 121)" }} />
         </Grid>
@@ -85,7 +100,6 @@ function Sidebar({ container, mobileOpen, handleDrawerToggle, drawerWidth }) {
         }}
         sx={{
           "& .MuiDrawer-paper": {
-            overflow: "hidden",
             background: "#555555",
             color: "#ffffffcc",
           },
