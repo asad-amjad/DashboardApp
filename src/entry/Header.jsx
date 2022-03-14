@@ -34,7 +34,7 @@ const Header = () => {
         </Grid>
 
         <Grid item md={6} xs={12}>
-          <Grid container style={{ display: "flex", alignItems: "center" }}>
+          <Grid container spacing={1} style={{ display: "flex", alignItems: "center" }}>
             <Grid item md={5} xs={6}>
               <FormGroup>
                 <FormControlLabel

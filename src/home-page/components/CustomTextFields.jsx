@@ -29,7 +29,7 @@ export const TextFieldCustom = ({ label, value, handleChange }) => {
 export const TextFieldWithLabel = ({ label, value, type }) => {
   return (
     <>
-      <Grid container style={{ display: "flex" }}>
+      <Grid container spacing={2} style={{ display: "flex" }}>
         <Grid item md={10}>
           <TextField
             style={{ width: "100%", marginBottom: 18 }}

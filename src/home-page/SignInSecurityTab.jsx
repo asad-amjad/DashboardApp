@@ -16,7 +16,7 @@ function SignInSecurityTab() {
     <>
       <>
         <Card style={{ padding: "15px", width: "100%" }}>
-          <Grid container pt={1} style={{ display: "flex" }}>
+          <Grid container pt={1} spacing={1} style={{ display: "flex" }}>
             <Grid item md={5} xs={5}>
               <Typography variant="h6">Sing in</Typography>
             </Grid>
@@ -36,7 +36,14 @@ function SignInSecurityTab() {
         </Card>
       </>
 
-      <Grid container pl={1} pr={1} pt={5} style={{ display: "flex" }}>
+      <Grid
+        container
+        spacing={2}
+        pl={1}
+        pr={1}
+        pt={5}
+        style={{ display: "flex" }}
+      >
         <Grid item md={5}>
           <Typography variant="h6">Security Information</Typography>
         </Grid>
@@ -59,7 +66,7 @@ function SignInSecurityTab() {
         </Grid>
       </Grid>
 
-      <Grid container pt={5}>
+      <Grid container pt={5} spacing={1} >
         <Grid item md={12}>
           <Typography variant="h6">Account Activity</Typography>
         </Grid>
